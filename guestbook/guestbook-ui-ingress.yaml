@@ -1,8 +1,9 @@
-apiVersion: apps/v1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: guestbook-ui
 spec:
+  ingressClassName: nginx
   rules:
     - host: guestbook-ui.minikube
       http:
